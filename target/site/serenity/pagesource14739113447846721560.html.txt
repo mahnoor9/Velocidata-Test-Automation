@@ -1,0 +1,64 @@
+<html xmlns="http://www.w3.org/1999/xhtml" class="login-pf"><head>
+    <meta charset="utf-8">
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta name="robots" content="noindex, nofollow">
+
+            <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Sign in to Velocidata</title>
+    <link rel="icon" href="/auth/resources/g6zs3/login/velocidata-theme/img/favicon.svg">
+            <link href="/auth/resources/g6zs3/common/keycloak/web_modules/@fortawesome/fontawesome-free/css/icons/all.css" rel="stylesheet">
+            <link href="/auth/resources/g6zs3/common/keycloak/web_modules/@patternfly/react-core/dist/styles/base.css" rel="stylesheet">
+            <link href="/auth/resources/g6zs3/common/keycloak/web_modules/@patternfly/react-core/dist/styles/app.css" rel="stylesheet">
+            <link href="/auth/resources/g6zs3/common/keycloak/node_modules/patternfly/dist/css/patternfly.min.css" rel="stylesheet">
+            <link href="/auth/resources/g6zs3/common/keycloak/node_modules/patternfly/dist/css/patternfly-additions.min.css" rel="stylesheet">
+            <link href="/auth/resources/g6zs3/common/keycloak/lib/pficon/pficon.css" rel="stylesheet">
+            <link href="/auth/resources/g6zs3/login/velocidata-theme/css/login.css" rel="stylesheet">
+            <script src="/auth/resources/g6zs3/login/velocidata-theme/js/login.js" type="text/javascript"></script>
+</head>
+
+<body class="">
+<div class="login-pf-page">
+    <div id="kc-header" class="logo-header">
+        <img src="/auth/resources/g6zs3/login/velocidata-theme/img/logo.svg" alt="Velocidata Logo">
+    </div>
+    <div class="form-container">
+        <header class="login-pf-header">
+                    <h1 id="kc-page-title" class="title-wrapper">        <div class="title">Login</div>
+
+</h1>
+        </header>
+        <div id="kc-content">
+            <div id="kc-content-wrapper">
+
+
+        <form id="kc-form-login" onsubmit="login.disabled = true; return true;" action="http://44.233.252.150:8080/auth/realms/master/login-actions/authenticate?session_code=6qs9IHsCNTqR3iqqLyy7TWXVo6c9DoeuBZNKQ0qNrfY&amp;execution=45e30abe-8222-41c7-8f7e-65525ef51934&amp;client_id=oidc&amp;tab_id=NFEsPHLqrUQ" method="post">
+            <div class="form-item-row">
+                <label class="form-label ">Email or Username</label>
+                    <input type="text" id="email-or-username-field" placeholder="Enter the email or username" name="username" value="" class="form-input " onkeyup="checkHasEmptyFileds()">
+            </div>
+            <div class="form-item-row">
+                <label class="form-label ">Password</label>
+                <input type="password" name="password" placeholder="Enter the password" class="form-input " id="password-input" onkeyup="checkHasEmptyFileds()">
+                <img id="password-input-icon" src="/auth/resources/g6zs3/login/velocidata-theme/img/password-visibility.png" class="password-visibility-img" onclick="toggleVisibility()">
+            </div>
+
+            <input type="hidden" id="id-hidden-input" name="credentialId">
+            <input name="login" id="kc-login" class="login-btn" type="submit" value="Login">
+
+                <div class="seperation-sec">
+                    <div class="seperation-line"></div>OR<div class="seperation-line"></div>
+                </div>
+                    <a type="button" href="/auth/realms/master/broker/keycloak-oidc/login?client_id=oidc&amp;tab_id=NFEsPHLqrUQ&amp;session_code=6qs9IHsCNTqR3iqqLyy7TWXVo6c9DoeuBZNKQ0qNrfY" id="social-keycloak-oidc" class="secondary-login-button"><img src="/auth/resources/g6zs3/login/velocidata-theme/img/claro.png" class="claro-img"> KeyCloak Identity Provider</a>
+        </form>
+    </div>
+
+
+
+            </div>
+        </div>
+
+    </div>
+  
+
+
+</body></html>
