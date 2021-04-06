@@ -3,15 +3,17 @@ package questions;
 import net.serenitybdd.core.pages.WebElementFacade;
 import net.serenitybdd.screenplay.Actor;
 import net.serenitybdd.screenplay.questions.Attribute;
+import net.serenitybdd.screenplay.questions.Text;
 import org.jetbrains.annotations.NotNull;
+import org.openqa.selenium.WebElement;
 
 import java.util.*;
 import java.util.stream.Collectors;
 
+import static net.thucydides.core.pages.components.HtmlTable.filterRows;
 import static net.thucydides.core.pages.components.HtmlTable.rowsFrom;
-import static userinterface.ClusterCollectorScreen.CollectorClusterTable;
-import static userinterface.ClusterCollectorScreen.CollectorClusterTableHeader;
-
+import static userinterface.ClusterCollectorScreen.*;
+/*
 public class IsClusterAdded {
 
     public Actor james;
@@ -20,7 +22,7 @@ public class IsClusterAdded {
         this.james= a;
     }
     public static void ClusterList (Actor james) {
-       /*List<WebElementFacade> a= CollectorClusterTable.resolveAllFor (james);
+       List<WebElementFacade> a= CollectorClusterTable.resolveAllFor (james);
        List<String> ab= null;
        a.forEach (attribute ->
        {
@@ -32,8 +34,9 @@ public class IsClusterAdded {
                 //CollectorClusterTable.resolveAllFor (james).stream ()
                 //.map (WebElementFacade::getText)
                 //.collect (Collectors.toList ());
-*/
-        List<Map<Object, String>> ab= rowsFrom(CollectorClusterTableHeader.resolveFor (james));
+
+      //  List<WebElement> ab= filterRows (CollectorClusterTable.resolveFor (james), Objects::);
+                //rowsFrom(CollectorClusterTableHeader.resolveFor (james));
         System.out.println ("fsdfdsfsdf");
         for(int i=0;i< ab.size (); i++)
         {
@@ -47,6 +50,23 @@ public class IsClusterAdded {
     {
 
     }
+    public static void GetClusterDetail(Actor james)
+    {
+      //  ClusterRow ("test").
+       // String s= Attribute.of(ClusterRow("test")).named("tagName").asAString ().answeredBy(james);
+       // List<Map<Object, String>> ab=
+          //      rowsFrom(CollectorClusterTableHead.resolveFor (james));
+
+        List<String> ab= Text.of (CollectorClusterTableHeader).asAList ().answeredBy (james);
+
+        for(int i=0;i< ab.size (); i++)
+        {
+            System.out.println ("print string");
+           // System.out.println (s)
+            System.out.println (ab.get (i));
+        }
+    }
 
 }
 
+*/

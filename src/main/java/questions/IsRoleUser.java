@@ -12,7 +12,6 @@ import java.util.Map;
 import java.util.stream.Collectors;
 
 import static net.thucydides.core.pages.components.HtmlTable.rowsFrom;
-import static userinterface.ClusterCollectorScreen.CollectorClusterTableHeader;
 import static userinterface.SideNavigation.ALL_DASHBOARDS;
 import static userinterface.SideNavigation.DASHBOARDS;
 

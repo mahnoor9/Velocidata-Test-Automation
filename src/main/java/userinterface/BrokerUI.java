@@ -32,5 +32,4 @@ public class BrokerUI {
     public static final By users = By.xpath ("//tr[@class='ng-scope']");
 
 
-
 }

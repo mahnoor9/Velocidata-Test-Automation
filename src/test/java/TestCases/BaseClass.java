@@ -22,6 +22,7 @@ public class BaseClass {
     public void setup()
     { //"https://front.opsdev.cf/keycloak/"
         driver.get( "https://front.opsdev.cf/collector_management" );
+        driver.manage().window().maximize();
         james.can(BrowseTheWeb.with(driver));
 
     }

@@ -12,6 +12,7 @@ import tasks.cluster.GoToCollectorCluster;
 
 import static net.serenitybdd.screenplay.GivenWhenThen.when;
 import static tasks.login.LoginToVelocidata.Login;
+import static userinterface.ClusterCollectorScreen.ASGGROUD_COL;
 import static userinterface.ClusterCollectorScreen.AddClusterButton;
 
 
@@ -30,7 +31,8 @@ public class SuperAdminRoleTest extends BaseClass {
         when(james).attemptsTo(clickOnDashboardMenu.DashboardNav(), Ensure.that(isRoleUser.DashboardSummaryToBeDisabled (james)).isFalse ());
 
         GoToCollectorCluster goToCollectorCluster= new GoToCollectorCluster ();
-        when(james).attemptsTo (goToCollectorCluster.CollectorClusterView(), Ensure.that(AddClusterButton).isDisplayed ());
+        when(james).attemptsTo (goToCollectorCluster.CollectorClusterView(), Ensure.that(AddClusterButton).isDisplayed (),Ensure.that(ASGGROUD_COL).isDisplayed ());
+
 
     }
 

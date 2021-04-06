@@ -11,7 +11,7 @@ import static userinterface.ClusterCollectorScreen.ASGGroupField;
 
 public class GoToCollectorCluster {
 
-    public Task CollectorClusterView(){
+    public static Task CollectorClusterView(){
         Click.on (CollectorCluster);
         return Task.where("{0} goes to cluster view",
                 Click.on (CollectorCluster)
